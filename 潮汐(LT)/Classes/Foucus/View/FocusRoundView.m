@@ -8,6 +8,8 @@
 
 #import "FocusRoundView.h"
 #import "CircleAnimationView.h"
+#import "LTMusicPlayer.h"
+#import <UserNotifications/UserNotifications.h>
 
 @interface FocusRoundView ()
 {
@@ -15,6 +17,7 @@
     NSString * _temStr;
     NSString * _weather;
     NSString * _time;
+   // NSString * _musicName;
 }
 @property (weak, nonatomic) IBOutlet UILabel *focusTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *weatherLabel;
@@ -23,6 +26,7 @@
 @property (nonatomic,assign) CGFloat roundAngle;
 @property (strong,nonatomic) NSTimer *timer;
 @property (strong,nonatomic) UIBezierPath *path;
+@property (strong,nonatomic) LTMusicPlayer *musicPlayer;
 //@property (nonatomic,assign) CGFloat startA;
 
 
@@ -46,6 +50,7 @@
     return _timer;
     
 }
+
 
 
 + (instancetype)focusRoundView{
@@ -80,6 +85,8 @@
 
 - (void)starAnimatewithTime:(NSString*)time weather:(NSString *)weather{
     [self addAnimateWithlayer:self.weatherLabel.layer];
+    LTMusicPlayer *musicPlayer = [LTMusicPlayer playingMusicWithMusicName:self.musicName];
+    self.musicPlayer = musicPlayer;
     _time = time;
     _weather = weather;
     self.weatherLabel.text = time;
@@ -120,6 +127,15 @@
     NSInteger total = [time[0] integerValue ]* 60+ [time[1] integerValue];
     NSInteger min = (total-1)/60;
     NSInteger second = (total -1)%60;
+    if (min == 0 && second == 0) {
+        [self.timer invalidate];
+         self.timer = nil;
+        [self.musicPlayer stop];
+        self.musicPlayer = nil;
+        [self allowForLocalNote];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"timeEnded" object:nil];
+    
+    }
     self.weatherLabel.text = [NSString stringWithFormat:@"%02ld:%02ld",(long)min,(long)second];
     
     [self setNeedsDisplay];
@@ -136,24 +152,33 @@
     self.roundAngle += self.angle;
     CGFloat starA  = - M_PI_2;
     CGFloat endA  = starA + self.roundAngle;
-    
    UIBezierPath *path = [UIBezierPath   bezierPathWithArcCenter:center radius:radius-2 startAngle:starA endAngle:endA clockwise:YES];
-    //[self.path addClip];
-    
-    //self.path.lineWidth = 3;
-   // [self.path addLineToPoint:center];
-
    [[UIColor whiteColor] setStroke];
-    
     [path stroke];
-    
-    
-}
+   
+    }
 
+- (void)allowForLocalNote{
+    
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
+    content.title = [NSString localizedUserNotificationStringForKey:@"hello" arguments:nil];
+    UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1 repeats:NO];
+    UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"notification" content:content trigger:trigger];
+    
+    [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+        UIAlertController * alert = [[UIAlertController alloc] init];
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [alert dismissViewControllerAnimated:YES completion:nil];
+        }];
+        [alert addAction:cancel];
+        [LTkeyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+    }];
+}
 
 - (void)pauseAnimate{
     [self.timer setFireDate:[NSDate distantFuture]];
-    
+    [self.musicPlayer pause];
     
     
 }
@@ -161,12 +186,14 @@
 - (void)goOnAnimate{
     
     [self.timer setFireDate:[NSDate date]];
+    [self.musicPlayer play];
     
 }
 
 - (void)stopAnimatewithTime:(NSString*)time weather:(NSString *)weather{
     [self addAnimateWithlayer:self.weatherLabel.layer];
-    
+    [self.musicPlayer stop];
+    self.musicPlayer = nil;
     self.weatherLabel.text = _weather;
     self.string = _time;
     [self.timer invalidate];
@@ -196,6 +223,12 @@
     self.weatherLabel.text = weatherStr;
 }
 
-
+- (void)setMusicName:(NSString *)musicName{
+        _musicName = musicName;
+    if ([self.musicPlayer isPlaying]) {
+        [self.musicPlayer stop];
+        _musicPlayer = [LTMusicPlayer playingMusicWithMusicName:musicName];
+    }
+}
 
 @end

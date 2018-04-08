@@ -15,23 +15,27 @@
             <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fcz-r1-nV3">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fcz-r1-nV3">
                     <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="海洋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgC-eH-kRL">
-                            <rect key="frame" x="63" y="100" width="123" height="49"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLU-Lw-4MP">
+                            <rect key="frame" x="103" y="145" width="45.5" height="28"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="Dj6-hc-i0S"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLU-Lw-4MP">
-                            <rect key="frame" x="94" y="148" width="63" height="28"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="海洋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgC-eH-kRL">
+                            <rect key="frame" x="64" y="101" width="123" height="49"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="49" id="G4t-fh-4l0"/>
+                                <constraint firstAttribute="width" constant="123" id="LvS-KR-Klj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="34"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -40,9 +44,21 @@
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" notEnabled="YES"/>
                     </accessibility>
+                    <constraints>
+                        <constraint firstItem="VLU-Lw-4MP" firstAttribute="centerX" secondItem="tgC-eH-kRL" secondAttribute="centerX" id="8sj-gW-2f1"/>
+                        <constraint firstItem="tgC-eH-kRL" firstAttribute="bottom" secondItem="VLU-Lw-4MP" secondAttribute="top" constant="5" id="O8n-FR-q6t"/>
+                        <constraint firstItem="tgC-eH-kRL" firstAttribute="centerY" secondItem="Fcz-r1-nV3" secondAttribute="centerY" id="QWK-zj-fOy"/>
+                        <constraint firstItem="tgC-eH-kRL" firstAttribute="centerX" secondItem="Fcz-r1-nV3" secondAttribute="centerX" id="yww-Jr-VCn"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Fcz-r1-nV3" secondAttribute="trailing" id="3et-Sl-KZ0"/>
+                <constraint firstAttribute="bottom" secondItem="Fcz-r1-nV3" secondAttribute="bottom" id="Jur-Ha-ZSf"/>
+                <constraint firstItem="Fcz-r1-nV3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ayb-m5-l40"/>
+                <constraint firstItem="Fcz-r1-nV3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bGw-Mf-6cZ"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="focusTimeLabel" destination="VLU-Lw-4MP" id="fLz-ll-MYw"/>

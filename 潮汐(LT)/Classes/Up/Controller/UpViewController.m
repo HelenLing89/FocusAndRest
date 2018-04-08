@@ -11,6 +11,7 @@
 #import "LTUpButton.h"
 #import "LTBaseNavigationController.h"
 #import "LTSleepViewController.h"
+#import "DownViewController.h"
 
 @interface UpViewController ()
 
@@ -20,31 +21,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithWhite:150/256.0 alpha:0.5];
     [self setUpGesture];
+    [self setUpBlurView];
+    
+}
+
+- (void)setUpBlurView{
+    UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    visualEffectView.frame = ScreenBounds;
+    [self.view insertSubview:visualEffectView atIndex:0];
+    
+    
 }
 
 
 - (void)setUpGesture{
     
-    UISwipeGestureRecognizer *down = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(down)];
-    down.direction = UISwipeGestureRecognizerDirectionDown;
-    [self.view addGestureRecognizer:down];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
+    //down.direction = UISwipeGestureRecognizerDirectionDown;
+    [self.view addGestureRecognizer:tap];
     
 }
 
 
-- (void)down{
+- (void)tap{
     
-   
+    DownViewController *down = (DownViewController *)self.presentingViewController;
+    if (down.toolBarBlock!=nil) {
+        down.toolBarBlock();
+    }
     
-    [self dismissViewControllerAnimated:YES completion:nil ];
+    [self dismissViewControllerAnimated:YES completion:nil];
+   // [self removeFromParentViewController];
+    //[self.view removeFromSuperview];
     
 }
 
 - (IBAction)fouseBtnClick:(LTUpButton *)sender {
-    
-    
-    
     
     FocusViewController *focus = [[FocusViewController alloc] init];
     focus.view.backgroundColor = [UIColor clearColor];

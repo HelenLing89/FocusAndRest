@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) NSString *string;
 @property (strong,nonatomic) NSString *weatherStr;
+@property (strong,nonatomic) NSString *musicName;
+
 
 
 + (instancetype)focusRoundView;

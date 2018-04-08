@@ -4,4 +4,5 @@ platform :ios, "11.2.6"
 target :'潮汐(LT)' do
     pod "Masonry"
     pod "pop"
+    pod "JPush"
 end

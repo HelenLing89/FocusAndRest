@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DownViewController : UIViewController
-
+@property (strong,nonatomic) void(^toolBarBlock)(void);
 @end

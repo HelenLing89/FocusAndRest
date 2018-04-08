@@ -10,6 +10,7 @@
 #import "UIView+LTExtension.h"
 
 @implementation UIButton (Extension)
+
 + (instancetype)buttonWithTitle:(NSString *)title titleColor:(UIColor *)color backgroudColor:(UIColor *)backgroundColor{
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.layer.cornerRadius = 20;

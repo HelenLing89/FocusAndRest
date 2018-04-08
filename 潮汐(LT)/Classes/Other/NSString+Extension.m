@@ -33,6 +33,7 @@
     if (minute<0) {
         hour = 23;
         minute = 60+minute;
+        
     }
     
    return [NSString stringWithFormat:@"%02ld:%02ld",(long)hour,(long)minute];
@@ -56,6 +57,13 @@
     }
 }
 
+- (NSInteger)calculateTotalTimeFromStringWithCurrentTime{
+    NSString *currentTime = [self getCurrentTime];
+    NSInteger totalTime = [currentTime convertToTotalMinutefromString] + self.integerValue;
+    
+    return  totalTime;
+    
+}
 
 - (NSString *)getCurrentTime{
     NSDate *date = [NSDate date];

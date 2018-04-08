@@ -16,6 +16,7 @@
                 <outlet property="dateViewTopCons" destination="pel-BC-ewF" id="h1t-nQ-gAU"/>
                 <outlet property="scrollView" destination="Cwk-TT-3Zz" id="vOT-bp-Llp"/>
                 <outlet property="scrollViewTopCons" destination="lZP-fT-k5V" id="4wC-M9-Jls"/>
+                <outlet property="toolBar" destination="khu-24-XTL" id="QlG-aj-GXM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,6 +28,43 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cwk-TT-3Zz">
                     <rect key="frame" x="0.0" y="0.0" width="391" height="399"/>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khu-24-XTL">
+                    <rect key="frame" x="0.0" y="20" width="391" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8G0-11-mg0">
+                            <rect key="frame" x="15" y="6" width="32" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="general_close_white_32_normal"/>
+                            <connections>
+                                <action selector="closeBtnClick" destination="-1" eventType="touchUpInside" id="VyL-pY-mqn"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcn-Hi-YuK">
+                            <rect key="frame" x="152" y="5" width="86" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="toolbar_calendar_white_32_normal"/>
+                            <connections>
+                                <action selector="calendarBtnClick" destination="-1" eventType="touchUpInside" id="NjM-zW-nd0"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lby-y6-h3M">
+                            <rect key="frame" x="317" y="5" width="66" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="toolbar_outlink_white_32_normal"/>
+                            <connections>
+                                <action selector="relinkBtnClick" destination="-1" eventType="touchUpInside" id="hiu-10-uLo"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="c97-uy-jFe"/>
+                    </constraints>
+                </view>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38o-h0-Ld8">
+                    <rect key="frame" x="0.0" y="0.0" width="391" height="399"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvP-ux-R6a">
                     <rect key="frame" x="0.0" y="-150" width="391" height="150"/>
                     <subviews>
@@ -65,18 +103,28 @@
             <color key="backgroundColor" red="0.8212277871" green="0.1732955997" blue="0.099635256280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="pvP-ux-R6a" secondAttribute="trailing" id="2jv-yS-Sya"/>
+                <constraint firstItem="38o-h0-Ld8" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="8Rc-t0-Zu7"/>
+                <constraint firstAttribute="trailing" secondItem="khu-24-XTL" secondAttribute="trailing" id="Nkm-mg-QcS"/>
+                <constraint firstItem="khu-24-XTL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Q7S-Qa-q8B"/>
                 <constraint firstAttribute="trailing" secondItem="Cwk-TT-3Zz" secondAttribute="trailing" id="VMB-zA-aGy"/>
+                <constraint firstItem="38o-h0-Ld8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZVc-S0-WD0"/>
                 <constraint firstAttribute="bottom" secondItem="Cwk-TT-3Zz" secondAttribute="bottom" id="cnh-rZ-wFM"/>
+                <constraint firstItem="38o-h0-Ld8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dXA-yP-27j"/>
                 <constraint firstItem="Cwk-TT-3Zz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lZP-fT-k5V"/>
                 <constraint firstItem="Cwk-TT-3Zz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mCF-Q7-UJE"/>
+                <constraint firstItem="khu-24-XTL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="oAR-uy-uZK"/>
                 <constraint firstItem="pvP-ux-R6a" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-150" id="pel-BC-ewF"/>
                 <constraint firstItem="pvP-ux-R6a" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qz1-bL-84H"/>
+                <constraint firstItem="38o-h0-Ld8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uhw-Qu-3HC"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="0.5" y="-111.5"/>
         </view>
     </objects>
     <resources>
+        <image name="general_close_white_32_normal" width="32" height="32"/>
+        <image name="toolbar_calendar_white_32_normal" width="32" height="32"/>
+        <image name="toolbar_outlink_white_32_normal" width="32" height="32"/>
         <image name="toolbar_redo_black_32_normal" width="32" height="32"/>
     </resources>
 </document>

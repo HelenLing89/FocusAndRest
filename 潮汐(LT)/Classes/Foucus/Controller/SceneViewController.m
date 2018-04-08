@@ -161,13 +161,13 @@
     //CGPoint currenP = [self.touch locationInView:self.navigationController.view];
     
     NSLog(@"%@",NSStringFromCGPoint(currentP));
-    //CGFloat offSetY = self.tableView.contentOffset.y;
+    CGFloat offSetY = self.tableView.contentOffset.y;
     
    
     
       //  self.tableView.transform = CGAffineTransformIdentity;
     //}else if (offSetY < 0){
-       // NSLog(@"%f",offSetY);
+    NSLog(@"%f",offSetY);
     CGRect frame = self.tableView.frame;
     if (panP.y > 0 &&currentP.y <= 667 && scrollView.panGestureRecognizer.state == UIGestureRecognizerStateChanged ) {
      self.navigationController.view.backgroundColor = [UIColor clearColor];

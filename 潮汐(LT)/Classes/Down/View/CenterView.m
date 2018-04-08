@@ -10,13 +10,29 @@
 
 @implementation CenterView
 
-
-+ (instancetype)centerView{
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
     
-    return  [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil].lastObject;
+    NSInteger count = self.subviews.count;
+    for (NSInteger i = count - 1; i >= 0; i--) {
+        UIView *childView = self.subviews[i];
+        
+        // 把当前控件上的坐标系转换成子控件上的坐标系
+        CGPoint childP = [self convertPoint:point toView:childView];
+        
+        UIView *fitView = [childView hitTest:childP withEvent:event];
+        
+        
+        if (fitView) { // 寻找到最合适的view
+            return fitView;
+        }
+        
+    }
     
+    return nil;
     
 }
+    
+
 
 
     

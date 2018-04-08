@@ -9,12 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface CenterView : UIView
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *closeBtn;
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *calendarBtn;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *relinkBtn;
 
-//@property (strong,nonatomic) (void)(^calendarBtnBlock)(UIView *view);
+
 + (instancetype)centerView;
 
 

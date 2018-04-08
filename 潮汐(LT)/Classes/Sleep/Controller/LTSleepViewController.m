@@ -12,6 +12,7 @@
 #import "SleepRespiteCenterView.h"
 #import "NSString+Extension.h"
 #import <Masonry.h>
+#import "RestCell.h"
 
 
 @interface LTSleepViewController ()<UIPickerViewDelegate,UIPickerViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate>
@@ -22,7 +23,8 @@
 @property (strong,nonatomic) UIButton *roundBtn;
 @property (strong,nonatomic) UIView *collectionView;
 @property (strong,nonatomic) SleepRespiteCenterView *respiteCenterView;
-@property (strong,nonatomic) UIPickerView *pickerView;
+@property (strong,nonatomic) UIPickerView *wakeUpView;
+@property (strong,nonatomic) UIPickerView *restView;
 @property (strong,nonatomic) NSArray *time;
 @property (weak, nonatomic) IBOutlet UIButton *sleepBtn;
 @property (weak, nonatomic) IBOutlet UIButton *respiteBtn;
@@ -132,7 +134,7 @@
     
     [view addSubview:detailL];
     
-    [view addSubview:self.pickerView];
+    [view addSubview:self.wakeUpView];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
     [center addGestureRecognizer:tap];
     
@@ -154,7 +156,7 @@
 - (void)setUpPickerView{
     UIPickerView *pickView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0,screenW, 200)];
     pickView.backgroundColor = [UIColor redColor];
-    self.pickerView = pickView;
+    self.wakeUpView = pickView;
     UILabel *label = [[UILabel alloc] init];
     label.center = CGPointMake(screenW/2, 100);
     label.bounds = CGRectMake(0,0,20,30);
@@ -218,8 +220,8 @@
     
 }
 
-- (void)setUpDetailLabel2Info{
-    
+- (void)setUpDetailLabel2InfoWithCollection:(UICollectionView*)collection{
+   
     
     
     
@@ -242,15 +244,19 @@
     label.textColor = [UIColor whiteColor];
     [collectionView addSubview:label];
     
-    
+//    UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 20, screenW,40)];
+//    self.restView = pickerView;
+//    pickerView.delegate = self;
+//    pickerView.dataSource = self;
+//    [collectionView addSubview:pickerView];
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     layout.minimumInteritemSpacing = 50;
     //layout.minimumLineSpacing = 10;
-    layout.itemSize = CGSizeMake(50, 40);
+    layout.itemSize = CGSizeMake(40, 40);
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectMake(0,20, screenW, 40) collectionViewLayout:layout];
-    [collection registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"sleep"];
+    [collection registerClass:[RestCell class] forCellWithReuseIdentifier:@"sleep"];
     //self.collectionView = collctionView;
     collection.delegate = self;
     collection.dataSource = self;
@@ -258,8 +264,9 @@
     collection.showsHorizontalScrollIndicator = NO;
    // collection.hidden = YES;
    // collection.backgroundColor = [UIColor greenColor];
+    [collection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:10 inSection:0] atScrollPosition: UICollectionViewScrollPositionCenteredHorizontally animated:NO];
     [collectionView addSubview:collection];
-                            
+    
 }
 
 
@@ -279,37 +286,40 @@
     
 }
 
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"sleep" forIndexPath:indexPath];
+    RestCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"sleep" forIndexPath:indexPath];
    // cell.frame = CGRectMake(0, 0, 50, 60);
    // cell.backgroundColor = [UIColor grayColor];
-    UILabel *label = [[UILabel alloc] init];
-    label.frame = CGRectMake(0, 0, 50, 40);
-    label.text = [NSString stringWithFormat:@"%@",self.time[indexPath.section][indexPath.row]];
-    label.textColor = [UIColor whiteColor];
-    label.font = [UIFont systemFontOfSize:20];
-    label.backgroundColor = [UIColor redColor];
-    label.textAlignment = NSTextAlignmentCenter;
-    [cell.contentView addSubview:label];
+//    UILabel *label = [[UILabel alloc] init];
+//    label.frame = CGRectMake(0, 0, 60, 40);
+    cell.restT = [NSString stringWithFormat:@"%@",self.time[indexPath.section][indexPath.row]];
+//    label.textColor = [UIColor whiteColor];
+//    label.font = [UIFont systemFontOfSize:20];
+//    label.backgroundColor = [UIColor redColor];
+//    label.textAlignment = NSTextAlignmentCenter;
+//    [cell.contentView addSubview:label];
+    
     return cell;
     
 }
-- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component{
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    return 60;
-    
+    NSString *string = self.time[0][indexPath.row];
+    NSInteger total = [string calculateTotalTimeFromStringWithCurrentTime];
+    NSString *totalTime = [NSString convertToStringFromTotalMinute:total];
+    self.detailLabel2.text = [NSString stringWithFormat:@"%@",totalTime];
+
 }
 
-- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component{
-    
-    return 70;
-    
-}
+
+
 - (void)tap:(UIGestureRecognizer *)tap{
     
     [UIView animateWithDuration:2 animations:^{
         self.centerView.hidden =  YES;
-        self.pickerView.hidden = NO;
+        self.wakeUpView.hidden = NO;
         [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
     }];
    
@@ -318,28 +328,36 @@
 - (void)timeChange{
     
    self.centerView.hidden = NO;
-   self.pickerView.hidden = YES;
+   self.wakeUpView.hidden = YES;
 }
 
 
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    if (pickerView == self.wakeUpView) {
+        return self.timeArr.count;
+    }else{
+        return self.time.count;
+    }
     
-    return self.timeArr.count;
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-   // NSLog(@"%lu",(unsigned long)[self.timeArr[component] count]);
-    return [self.timeArr[component] count];
-   
+    if (pickerView == self.wakeUpView) {
+        return [self.timeArr[component] count];
+    }else{
+        return [self.time[component] count];
+    }
+    
 }
 
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
     [self deleteSeperator:pickerView];
-    
     UILabel *label = [[UILabel alloc] init];
-    
+    [label sizeToFit];
+    label.textAlignment = NSTextAlignmentCenter;
+    if (pickerView == self.wakeUpView) {
     NSString *string = [NSString stringWithFormat:@"%@",self.timeArr[component][row]];
     
     NSMutableAttributedString *attFirst = [[NSMutableAttributedString alloc] initWithString:string];
@@ -350,14 +368,18 @@
     //firstAttribute[NSStrokeColorAttributeName] = [UIColor whiteColor];
     [attFirst setAttributes:firstAttribute range:NSMakeRange(0, attFirst.length)];
     label.attributedText = attFirst;
-    [label sizeToFit];
-    label.textAlignment = NSTextAlignmentCenter;
+    }else{
+        NSString *string = [NSString stringWithFormat:@"%@",self.time[component][row]];
+        label.text = string;
+        label.textColor = [UIColor whiteColor];
+        label.transform = CGAffineTransformMakeRotation(M_PI*2);
+    }
     return  label;
-    
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     //self.centerView.restTime = [NSString stringWithFormat:@"%@:%@",self.timeArr[0],self.timeArr[1][row]];
+    if (pickerView == self.wakeUpView) {
     NSString *string = self.centerView.restTime;
     NSArray *strArr = [string componentsSeparatedByString:@":"];
     if (component == 0) {
@@ -371,10 +393,33 @@
     [self setUpDetailLabelInfo];
     [self.timer invalidate];
     self.timer = nil;
+    }else{
+        NSString *string = self.time[component][row];
+        NSLog(@"%@",string);
+        
+    }
     
 }
 
+- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component{
+    if (pickerView ==self.wakeUpView) {
+        return 60;
+    }else{
+        return 40;
+    }
+    
+    
+}
 
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component{
+    
+    if (pickerView ==self.wakeUpView) {
+        return 70;
+    }else{
+        return 50;
+    }
+    
+}
 
 
 - (void)deleteSeperator:(UIView *)view{
@@ -419,8 +464,20 @@
     [self.scrollView setContentOffset:CGPointMake(screenW, 0) animated:YES];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if ([scrollView isKindOfClass:[UICollectionView class]]) {
+    UICollectionView *collectionView = (UICollectionView *)scrollView;
+        NSLog(@"%@",NSStringFromCGPoint(collectionView.contentOffset));
+    NSArray *indexArray = [collectionView indexPathsForVisibleItems];
+    for (NSIndexPath *index in indexArray) {
+        //  CGPoint point = [self.view convertPoint:cell.center toView:self.view];
+      //  NSLog(@"%ld",index.row);
+    }
+}
+}
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    if (scrollView == self.scrollView) {
     NSInteger i = scrollView.contentOffset.x /screenW;
     if (i == 0) {
         self.sleepBtn.selected = YES;
@@ -432,10 +489,42 @@
         self.roundBtn.selected = YES;
     }
     
+    }else{
+        
+        UICollectionView *collectionView = (UICollectionView *)scrollView;
+        NSArray *indexArray = [collectionView indexPathsForVisibleItems];
+        for (NSIndexPath *index in indexArray) {
+          //  CGPoint point = [self.view convertPoint:cell.center toView:self.view];
+          //  NSLog(@"%ld",index.row);
+        }
+       // NSInteger row =[self findOutCenterViewWithArray:cellArr];
+        //RestCell *cell = cellArr[row];
+       //NSLog(@"%@",cell.restT);
+        
+        
+//        NSLog(@"%@",NSStringFromCGPoint(collectionView.contentOffset));
+//       // NSLog(@"%@",NSStringFromCGPoint(collectionve))
+//        NSIndexPath *index = [collectionView indexPathForItemAtPoint:CGPointMake(screenW/2+collectionView.contentOffset.x/screenW,20)];
+//        [collectionView scrollToItemAtIndexPath:index atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+//        NSLog(@"%@",self.time[index.section][index.row]);
+        
+        
+    }
+}
+
+
+- (NSInteger)findOutCenterViewWithArray:(NSArray*)array{
+    
+    for (int i = 0; i<array.count; i++) {
+        RestCell *cell = array[i];
+        cell.tag = i;
+    }
+    
+    return 0;
+    
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    
     
     [self scrollViewDidEndScrollingAnimation:scrollView];
 }

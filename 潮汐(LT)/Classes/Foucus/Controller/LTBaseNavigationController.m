@@ -20,7 +20,7 @@
     
     self.navigationBar.tintColor = [UIColor blackColor];
     self.navigationBar.userInteractionEnabled = YES;
-    
+    //self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{

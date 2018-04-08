@@ -13,4 +13,5 @@
 - (NSInteger)convertToTotalMinutefromString;
 + (instancetype)convertToStringFromTotalMinute:(NSInteger)total;
 - (NSInteger)calculateDelateTimeFromString;
+- (NSInteger)calculateTotalTimeFromStringWithCurrentTime;
 @end

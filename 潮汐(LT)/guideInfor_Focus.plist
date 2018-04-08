@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>icon</key>
+		<string>guide_intro_focus_banner_1</string>
+		<key>largeWords</key>
+		<string>和大自然一起沉浸</string>
+		<key>smallWords</key>
+		<string>置身海边、森林或者雨天,放松心情,保持专注来一场灵感风暴</string>
+		<key>buttonWords</key>
+		<string>继续</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>guide_intro_focus_banner_2</string>
+		<key>largeWords</key>
+		<string>用计时器安排时间</string>
+		<key>smallWords</key>
+		<string>专注半个小时、休息五分钟 劳逸结合，打败拖延症</string>
+		<key>buttonWords</key>
+		<string>完成</string>
+	</dict>
+</array>
+</plist>

@@ -20,9 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uh9-mL-gaU" customClass="FocusCenterView">
+                <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uh9-mL-gaU" customClass="FocusCenterView">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrI-sv-Ncn">
                             <rect key="frame" x="164" y="629" width="46" height="30"/>
@@ -38,6 +37,12 @@
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="uh9-mL-gaU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5Lm-a8-zi2"/>
+                <constraint firstAttribute="trailing" secondItem="uh9-mL-gaU" secondAttribute="trailing" id="8QY-6e-yX2"/>
+                <constraint firstItem="uh9-mL-gaU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PuD-JE-CB9"/>
+                <constraint firstAttribute="bottom" secondItem="uh9-mL-gaU" secondAttribute="bottom" id="iyR-Bh-gJb"/>
+            </constraints>
             <point key="canvasLocation" x="32.5" y="96.5"/>
         </view>
     </objects>

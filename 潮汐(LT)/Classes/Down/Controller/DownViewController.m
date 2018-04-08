@@ -11,8 +11,10 @@
 #import "LTButton.h"
 #import "CenterView.h"
 #import "UpViewController.h"
-#define screenW [UIScreen mainScreen].bounds.size.width
-#define screenH [UIScreen mainScreen].bounds.size.height
+#import <UMShare/UMShare.h>
+#import <UShareUI/UShareUI.h>
+#import "GuideScrollView.h"
+
 @interface DownViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -26,10 +28,12 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *dateViewTopCons;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewTopCons;
+@property (weak, nonatomic) IBOutlet UIView *toolBar;
+@property (weak, nonatomic) IBOutlet UIView *centerView;
 
 
 
-@property (weak, nonatomic) CenterView *centerView;
+
 
 @end
 
@@ -39,20 +43,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-   [self setUpScrollView];
-  //  [self setUpCollectionView];
-    [self setUpCenterView];
+    [self setUpScrollView];
     [self setUpDateView];
+    [self setUpToolBar];
     
 }
 
 
+
 - (void)viewWillAppear:(BOOL)animated{
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showOnUpViewController) name:@"GuideViewControllerShowUpController" object:nil];
+    }
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self showOnUpViewController];
+        });
+    });
+    }
+
+- (void)viewWillLayoutSubviews{
+    
+    
+}
+- (void)viewDidLayoutSubviews{
     
    
     
-    
+}
+
+- (void)showOnUpViewController{
+    UpViewController *upVc = [[UpViewController alloc] init];
+    [self presentViewController:upVc animated:YES completion:nil];
+   // [self addChildViewController:upVc];
+    //[self.view addSubview:upVc.view];
+    self.toolBar.hidden = YES;
 }
 
 - (void)setUpDateView{
@@ -61,14 +90,6 @@
     CGFloat y = self.dateView.frame.size.height - 80;
     CGFloat w = self.view.frame.size.width;
     CGFloat h = y;
-    
-   // UIView *dateView = [[UIView alloc] initWithFrame:CGRectMake(0, -150, self.view.frame.size.width, 150)];
-    //dateView.backgroundColor = [UIColor redColor];
-    
-    
-    // LinerLayout *layout = [[LinerLayout alloc] init];
-    //.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
@@ -167,7 +188,7 @@
 
 - (void)setUpScrollView{
     
-    self.scrollView.frame = self.view.bounds;
+    self.scrollView.frame = ScreenBounds;
     self.scrollView.backgroundColor = [UIColor blackColor];
     self.scrollView.pagingEnabled = YES;
     
@@ -181,7 +202,7 @@
         
     }
     
-    self.scrollView.contentSize = CGSizeMake(self.view.bounds.size.width * 4, 0);
+    self.scrollView.contentSize = CGSizeMake(screenW * 4, 0);
    // self.scrollView = scrollView;
     self.scrollView.delegate = self;
 
@@ -219,61 +240,68 @@
     
     
 }
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    
+    return UIStatusBarStyleLightContent;
+}
 
+
+
+- (void)setUpToolBar{
+    
+    __weak typeof (self)weakSelf = self;
+    self.toolBarBlock = ^{
+        weakSelf.toolBar.hidden = NO;
+       // weakSelf.centerView.userInteractionEnabled = NO;
+    };
+    
+}
 
 - (void)setUpCenterView{
     
-    CenterView *centerView = [CenterView centerView];
-    self.centerView = centerView;
-    centerView.userInteractionEnabled = YES;
-    UIBarButtonItem *calendarBtn = [centerView.calendarBtn initWithTitle:nil style:UIBarButtonItemStylePlain target:self action:@selector(calendarBtnClick)];
-    UIBarButtonItem *closeBtn = [centerView.closeBtn initWithTitle:nil style:UIBarButtonItemStylePlain target:self action:@selector(closeBtnClick:)];
-    UIBarButtonItem *relinkBtn = [centerView.relinkBtn initWithTitle:nil style:UIBarButtonItemStylePlain target:self action:@selector(relinkBtnClick:)];
-  // centerView.userInteractionEnabled = NO;
-   [self.view insertSubview:centerView aboveSubview:self.scrollView];
+    self.centerView.userInteractionEnabled = YES;
+   
     
-    UISwipeGestureRecognizer *up = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(presentUpController)];
-    up.direction = UISwipeGestureRecognizerDirectionUp;
-    [self.centerView addGestureRecognizer:up];
+//    UIBarButtonItem *calendarBtn = [centerView.calendarBtn initWithTitle:nil style:UIBarButtonItemStylePlain target:self action:@selector(calendarBtnClick)];
+//    UIBarButtonItem *closeBtn = [centerView.closeBtn initWithTitle:nil style:UIBarButtonItemStylePlain target:self action:@selector(closeBtnClick:)];
+//    UIBarButtonItem *relinkBtn = [centerView.relinkBtn initWithTitle:nil style:UIBarButtonItemStylePlain target:self action:@selector(relinkBtnClick:)];
+   self.centerView.userInteractionEnabled = NO;
+  // [self.view insertSubview:centerView aboveSubview:self.scrollView];
     
-    UISwipeGestureRecognizer *down = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(calendarBtnClick)];
-    down.direction = UISwipeGestureRecognizerDirectionDown;
+//    UISwipeGestureRecognizer *up = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(presentUpController)];
+//    up.direction = UISwipeGestureRecognizerDirectionUp;
+//    [self.centerView addGestureRecognizer:up];
     
-    [self.centerView addGestureRecognizer:down];
-    
+//    UISwipeGestureRecognizer *down = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(calendarClick)];
+//    down.direction = UISwipeGestureRecognizerDirectionDown;
+//
+//    [self.centerView addGestureRecognizer:down];
+//
     
 }
 
-
-- (void)presentUpController{
-    
-    UpViewController *upVc = [[UpViewController alloc] init];
-    [self presentViewController:upVc animated:YES completion:nil];
-    
-    
-}
 
 - (void)upCalender{
     
-
+    if (self.dateViewTopCons.constant == 0){
     [UIView animateWithDuration:0.5 animations:^{
-        
-        self.centerView.userInteractionEnabled = YES;
-        
-        self.scrollViewTopCons.constant = 0;
-        self.dateViewTopCons.constant = -150;
-        
+            self.scrollViewTopCons.constant = 0;
+            self.dateViewTopCons.constant = -150;
         
     }];
+        
+    }else{
+    
+            [self showOnUpViewController];
+    }
     
 }
-
-- (void)calendarBtnClick{
+- (IBAction)calendarBtnClick {
     
     
     [UIView animateWithDuration:0.5 animations:^{
         
-        self.centerView.userInteractionEnabled = NO;
+      // self.centerView.userInteractionEnabled = YES;
         
      //   [self.view insertSubview:self.dateView aboveSubview:self.centerView];
         self.scrollViewTopCons.constant = 150;
@@ -285,20 +313,89 @@
     
 }
 
-
-- (void)closeBtnClick:(UIBarButtonItem *)btn{
-    
-
+- (void)calendarClick{
+    [UIView animateWithDuration:0.5 animations:^{
+        
+      // self.centerView.userInteractionEnabled = NO;
+        
+        //   [self.view insertSubview:self.dateView aboveSubview:self.centerView];
+        self.scrollViewTopCons.constant = 150;
+        self.dateViewTopCons.constant = 0;
+        
+        
+    }];
     
     
 }
 
-- (void)relinkBtnClick:(UIBarButtonItem *)btn{
+- (IBAction)closeBtnClick {
     
-    
+    [self showOnUpViewController];
     
     
 }
+
+- (IBAction)relinkBtnClick {
+    __weak typeof(self) weakSelf = self;
+    [UMSocialUIManager setPreDefinePlatforms:@[@(UMSocialPlatformType_Sina),@(UMSocialPlatformType_QQ)]] ;
+    [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
+        
+        [weakSelf shareWebPageToPlatformType:platformType];
+    }];
+    
+    
+
+   // UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+   // UMShareMessageObject *shareObject = [[UMShare alloc] init];
+    //shareObject.smsContent =@"测试";
+    //messageObject.text = @"社会化组件UShare将各大社交平台接入您的应用，快速武装App。";
+   // messageObject.shareObject = shareObject;
+//    [[UMSocialManager defaultManager] shareToPlatform:UMSocialPlatformType_Sina messageObject:messageObject currentViewController:self completion:^(id result, NSError *error) {
+//        if (error) {
+//            NSLog(@"*********share fail with error %@*****",error);
+//        }else{
+//            NSLog(@"response data is %@",result);
+//        }
+//    }];
+    
+//    NSString *appKey = @"1920292060";
+//    NSString *shareText = @"梦想还是要有的,万一实现了呢.http://www.baidu.com";
+//    UIImage *image = [UIImage imageNamed:@"daycard_qrcode"];
+//    NSArray *snsNames = @[UMShareToDouban, UMShareToEmail, UMShareToRenren, UMShareToSina, UMShareToWechatSession, UMShareToWechatTimeline];
+//    
+//    [UMSocialSnsService presentSnsIconSheetView:self
+//                                         appKey:appKey
+//                                      shareText:shareText
+//                                     shareImage:image
+//                                shareToSnsNames:snsNames
+//                                       delegate:nil];
+//    
+    
+}
+
+- (void)shareWebPageToPlatformType:(UMSocialPlatformType)platformType{
+    
+    
+    UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+    // UMShareMessageObject *shareObject = [[UMShare alloc] init];
+    //shareObject.smsContent =@"测试";
+    messageObject.text = @"社会化组件UShare将各大社交平台接入您的应用，快速武装App。";
+    // messageObject.shareObject = shareObject;
+    [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:self completion:^(id result, NSError *error) {
+        if (error) {
+            NSLog(@"*********share fail with error %@*****",error);
+        }else{
+            NSLog(@"response data is %@",result);
+        }
+    }];
+}
+
+
+- (void)dealloc{
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

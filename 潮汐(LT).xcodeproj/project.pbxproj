@@ -15,8 +15,42 @@
 		743F6C2D205AA896001511D9 /* SleepRespiteCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 743F6C2C205AA896001511D9 /* SleepRespiteCenterView.m */; };
 		743F6C2F205AA8B0001511D9 /* SleepRespiteCenterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 743F6C2E205AA8B0001511D9 /* SleepRespiteCenterView.xib */; };
 		743F6C32205AB2D3001511D9 /* LTVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 743F6C31205AB2D3001511D9 /* LTVerticalButton.m */; };
+		7456709F206139D300023E7F /* Glass_Note.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7456708D206139D300023E7F /* Glass_Note.caf */; };
+		745670A0206139D300023E7F /* preset_focus_ocean.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7456708E206139D300023E7F /* preset_focus_ocean.m4a */; };
+		745670A1206139D300023E7F /* Space_Notification1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7456708F206139D300023E7F /* Space_Notification1.caf */; };
+		745670A2206139D300023E7F /* Tri-tone.caf in Resources */ = {isa = PBXBuildFile; fileRef = 74567090206139D300023E7F /* Tri-tone.caf */; };
+		745670A3206139D300023E7F /* preset_focus_muse.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 74567091206139D300023E7F /* preset_focus_muse.m4a */; };
+		745670A4206139D300023E7F /* Space_Error2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 74567092206139D300023E7F /* Space_Error2.caf */; };
+		745670A5206139D300023E7F /* Space_Error1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 74567093206139D300023E7F /* Space_Error1.caf */; };
+		745670A6206139D300023E7F /* preset_focus_rain.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 74567094206139D300023E7F /* preset_focus_rain.m4a */; };
+		745670A7206139D300023E7F /* preset_sleep_storm.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 74567095206139D300023E7F /* preset_sleep_storm.m4a */; };
+		745670A8206139D300023E7F /* preset_sleep_evening.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 74567096206139D300023E7F /* preset_sleep_evening.m4a */; };
+		745670A9206139D300023E7F /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 74567097206139D300023E7F /* intro.mp4 */; };
+		745670AA206139D300023E7F /* Glass_Done1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 74567098206139D300023E7F /* Glass_Done1.caf */; };
+		745670AB206139D300023E7F /* Glass_Done2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 74567099206139D300023E7F /* Glass_Done2.caf */; };
+		745670AC206139D300023E7F /* Ticktack.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7456709A206139D300023E7F /* Ticktack.m4a */; };
+		745670AD206139D300023E7F /* Glass_Error1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7456709B206139D300023E7F /* Glass_Error1.caf */; };
+		745670AE206139D300023E7F /* preset_wakeup_ocean.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7456709C206139D300023E7F /* preset_wakeup_ocean.m4a */; };
+		745670AF206139D300023E7F /* preset_wakeup_forest.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7456709D206139D300023E7F /* preset_wakeup_forest.m4a */; };
+		745670B0206139D300023E7F /* Glass_Error2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7456709E206139D300023E7F /* Glass_Error2.caf */; };
+		74575CE3206015490026A147 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 74575CE2206015490026A147 /* libsqlite3.tbd */; };
+		74575CE5206015570026A147 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74575CE4206015570026A147 /* CoreGraphics.framework */; };
+		74575CE72060AF670026A147 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74575CE62060AF670026A147 /* ImageIO.framework */; };
+		74575CE92060AF790026A147 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 74575CE82060AF790026A147 /* libc++.tbd */; };
+		74575CEB2060AF8A0026A147 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 74575CEA2060AF8A0026A147 /* libz.tbd */; };
+		74575CED2060AF980026A147 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 74575CEC2060AF980026A147 /* libstdc++.tbd */; };
+		74575CEF2060AFA70026A147 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74575CEE2060AFA60026A147 /* CoreTelephony.framework */; };
+		74575CF12060AFC00026A147 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74575CF02060AFC00026A147 /* SystemConfiguration.framework */; };
+		74575CF32060AFD40026A147 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 74575CF22060AFD40026A147 /* libiconv.tbd */; };
+		74575CF52060AFE00026A147 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74575CF42060AFDF0026A147 /* Security.framework */; };
+		74575D342060B9770026A147 /* UMSocialSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 74575D272060B9770026A147 /* UMSocialSDKResources.bundle */; };
+		74575D352060B9770026A147 /* UShareUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74575D282060B9770026A147 /* UShareUI.framework */; };
+		74575D362060B9770026A147 /* UMShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74575D292060B9770026A147 /* UMShare.framework */; };
+		74575D372060B9770026A147 /* libSocialSina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74575D2C2060B9770026A147 /* libSocialSina.a */; };
+		74575D382060B9770026A147 /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74575D302060B9770026A147 /* libSocialQQ.a */; };
+		74575D392060B9770026A147 /* UMSocialSDKPromptResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 74575D322060B9770026A147 /* UMSocialSDKPromptResources.bundle */; };
+		74575D3A2060B9770026A147 /* libUMSocialLog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74575D332060B9770026A147 /* libUMSocialLog.a */; };
 		74644E6D204CFCBA0068D9BE /* CenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74644E6C204CFCBA0068D9BE /* CenterView.m */; };
-		74644E6F204D08A40068D9BE /* CenterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74644E6E204D08A40068D9BE /* CenterView.xib */; };
 		74644E72204D3D540068D9BE /* LTUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 74644E71204D3D540068D9BE /* LTUpButton.m */; };
 		74644E81204D41C60068D9BE /* FocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74644E7F204D41C60068D9BE /* FocusViewController.m */; };
 		74644E82204D41C60068D9BE /* FocusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74644E80204D41C60068D9BE /* FocusViewController.xib */; };
@@ -52,6 +86,8 @@
 		749EF96E205A296600D3FE3E /* SleepCenterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 749EF96D205A296600D3FE3E /* SleepCenterView.xib */; };
 		749EF97B205A4C4300D3FE3E /* time.plist in Resources */ = {isa = PBXBuildFile; fileRef = 749EF97A205A4C4300D3FE3E /* time.plist */; };
 		749EF97E205A5FEB00D3FE3E /* UIPickerView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 749EF97D205A5FEB00D3FE3E /* UIPickerView+Extension.m */; };
+		74B974762063A84A007F6E55 /* focusMusic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74B974752063A84A007F6E55 /* focusMusic.plist */; };
+		74B974802063B10E007F6E55 /* LTMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B9747F2063B10E007F6E55 /* LTMusicPlayer.m */; };
 		74BAEE7720501259004D3D91 /* FocusSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BAEE7520501259004D3D91 /* FocusSettingViewController.m */; };
 		74BAEE7B20502233004D3D91 /* BaseNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BAEE7A20502233004D3D91 /* BaseNavigationBar.m */; };
 		74BAEE7F205042FA004D3D91 /* FocusSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BAEE7E205042FA004D3D91 /* FocusSettingItem.m */; };
@@ -78,6 +114,20 @@
 		74E10EA2205273A900847866 /* SceneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74E10EA0205273A900847866 /* SceneCell.xib */; };
 		74E10EA520527D2400847866 /* SceneItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E10EA420527D2400847866 /* SceneItem.m */; };
 		74E19196205B7BED0053504C /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E19195205B7BED0053504C /* NSString+Extension.m */; };
+		74E191BC205BF0FD0053504C /* RestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E191BB205BF0FD0053504C /* RestCell.m */; };
+		74EE3C252063F9DC00B513E1 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EE3C242063F9DC00B513E1 /* GuideViewController.m */; };
+		74EE3C282063FCFD00B513E1 /* GuideScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EE3C272063FCFD00B513E1 /* GuideScrollView.m */; };
+		74EE3C2A2063FDC700B513E1 /* GuideScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74EE3C292063FDC700B513E1 /* GuideScrollView.xib */; };
+		74EE3C2C20649A8F00B513E1 /* guideInfor.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74EE3C2B20649A8F00B513E1 /* guideInfor.plist */; };
+		74EE3C2F20649AAA00B513E1 /* GuideItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EE3C2E20649AAA00B513E1 /* GuideItem.m */; };
+		74EE3C322064A32200B513E1 /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EE3C312064A32200B513E1 /* UILabel+Extension.m */; };
+		74EE3C352064E8AE00B513E1 /* GuideTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EE3C342064E8AE00B513E1 /* GuideTool.m */; };
+		74EE3C3A2067EFCF00B513E1 /* LTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EE3C392067EFCF00B513E1 /* LTAlertView.m */; };
+		74EE3C3F20689C4800B513E1 /* LTAlertModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EE3C3E20689C4800B513E1 /* LTAlertModel.m */; };
+		74EE3C4120689E4500B513E1 /* guideInfor_Focus.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74EE3C4020689E4500B513E1 /* guideInfor_Focus.plist */; };
+		74FDB20C2060E6E00063D11B /* SecurityEnvSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FDB20B2060E6DF0063D11B /* SecurityEnvSDK.framework */; };
+		74FDB20E2060E6EA0063D11B /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FDB20D2060E6EA0063D11B /* UTDID.framework */; };
+		74FDB2102060E70E0063D11B /* UMCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FDB20F2060E70E0063D11B /* UMCommon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,9 +144,47 @@
 		743F6C2E205AA8B0001511D9 /* SleepRespiteCenterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SleepRespiteCenterView.xib; sourceTree = "<group>"; };
 		743F6C30205AB2D3001511D9 /* LTVerticalButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTVerticalButton.h; sourceTree = "<group>"; };
 		743F6C31205AB2D3001511D9 /* LTVerticalButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTVerticalButton.m; sourceTree = "<group>"; };
+		7440D496206D2CC7001410EE /* NotoSerif-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerif-Italic.ttf"; sourceTree = "<group>"; };
+		7440D5182070FCFE001410EE /* 潮汐(LT).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "潮汐(LT).entitlements"; sourceTree = "<group>"; };
+		7456708D206139D300023E7F /* Glass_Note.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Glass_Note.caf; sourceTree = "<group>"; };
+		7456708E206139D300023E7F /* preset_focus_ocean.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = preset_focus_ocean.m4a; sourceTree = "<group>"; };
+		7456708F206139D300023E7F /* Space_Notification1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Space_Notification1.caf; sourceTree = "<group>"; };
+		74567090206139D300023E7F /* Tri-tone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tri-tone.caf"; sourceTree = "<group>"; };
+		74567091206139D300023E7F /* preset_focus_muse.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = preset_focus_muse.m4a; sourceTree = "<group>"; };
+		74567092206139D300023E7F /* Space_Error2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Space_Error2.caf; sourceTree = "<group>"; };
+		74567093206139D300023E7F /* Space_Error1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Space_Error1.caf; sourceTree = "<group>"; };
+		74567094206139D300023E7F /* preset_focus_rain.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = preset_focus_rain.m4a; sourceTree = "<group>"; };
+		74567095206139D300023E7F /* preset_sleep_storm.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = preset_sleep_storm.m4a; sourceTree = "<group>"; };
+		74567096206139D300023E7F /* preset_sleep_evening.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = preset_sleep_evening.m4a; sourceTree = "<group>"; };
+		74567097206139D300023E7F /* intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = intro.mp4; sourceTree = "<group>"; };
+		74567098206139D300023E7F /* Glass_Done1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Glass_Done1.caf; sourceTree = "<group>"; };
+		74567099206139D300023E7F /* Glass_Done2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Glass_Done2.caf; sourceTree = "<group>"; };
+		7456709A206139D300023E7F /* Ticktack.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ticktack.m4a; sourceTree = "<group>"; };
+		7456709B206139D300023E7F /* Glass_Error1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Glass_Error1.caf; sourceTree = "<group>"; };
+		7456709C206139D300023E7F /* preset_wakeup_ocean.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = preset_wakeup_ocean.m4a; sourceTree = "<group>"; };
+		7456709D206139D300023E7F /* preset_wakeup_forest.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = preset_wakeup_forest.m4a; sourceTree = "<group>"; };
+		7456709E206139D300023E7F /* Glass_Error2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Glass_Error2.caf; sourceTree = "<group>"; };
+		74575CE2206015490026A147 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		74575CE4206015570026A147 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		74575CE62060AF670026A147 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		74575CE82060AF790026A147 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		74575CEA2060AF8A0026A147 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		74575CEC2060AF980026A147 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		74575CEE2060AFA60026A147 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		74575CF02060AFC00026A147 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		74575CF22060AFD40026A147 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		74575CF42060AFDF0026A147 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		74575D272060B9770026A147 /* UMSocialSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKResources.bundle; sourceTree = "<group>"; };
+		74575D282060B9770026A147 /* UShareUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UShareUI.framework; sourceTree = "<group>"; };
+		74575D292060B9770026A147 /* UMShare.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMShare.framework; sourceTree = "<group>"; };
+		74575D2C2060B9770026A147 /* libSocialSina.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialSina.a; sourceTree = "<group>"; };
+		74575D2D2060B9770026A147 /* UMSocialSinaHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialSinaHandler.h; sourceTree = "<group>"; };
+		74575D2F2060B9770026A147 /* UMSocialQQHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialQQHandler.h; sourceTree = "<group>"; };
+		74575D302060B9770026A147 /* libSocialQQ.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialQQ.a; sourceTree = "<group>"; };
+		74575D322060B9770026A147 /* UMSocialSDKPromptResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKPromptResources.bundle; sourceTree = "<group>"; };
+		74575D332060B9770026A147 /* libUMSocialLog.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMSocialLog.a; sourceTree = "<group>"; };
 		74644E6B204CFCB90068D9BE /* CenterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CenterView.h; sourceTree = "<group>"; };
 		74644E6C204CFCBA0068D9BE /* CenterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CenterView.m; sourceTree = "<group>"; };
-		74644E6E204D08A40068D9BE /* CenterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CenterView.xib; sourceTree = "<group>"; };
 		74644E70204D3D540068D9BE /* LTUpButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTUpButton.h; sourceTree = "<group>"; };
 		74644E71204D3D540068D9BE /* LTUpButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTUpButton.m; sourceTree = "<group>"; };
 		74644E7E204D41C60068D9BE /* FocusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FocusViewController.h; sourceTree = "<group>"; };
@@ -153,6 +241,9 @@
 		749EF97A205A4C4300D3FE3E /* time.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = time.plist; path = "潮汐(LT)/time.plist"; sourceTree = SOURCE_ROOT; };
 		749EF97C205A5FEB00D3FE3E /* UIPickerView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIPickerView+Extension.h"; sourceTree = "<group>"; };
 		749EF97D205A5FEB00D3FE3E /* UIPickerView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIPickerView+Extension.m"; sourceTree = "<group>"; };
+		74B974752063A84A007F6E55 /* focusMusic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = focusMusic.plist; sourceTree = "<group>"; };
+		74B9747E2063B10E007F6E55 /* LTMusicPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTMusicPlayer.h; sourceTree = "<group>"; };
+		74B9747F2063B10E007F6E55 /* LTMusicPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTMusicPlayer.m; sourceTree = "<group>"; };
 		74BAEE7420501259004D3D91 /* FocusSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FocusSettingViewController.h; sourceTree = "<group>"; };
 		74BAEE7520501259004D3D91 /* FocusSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FocusSettingViewController.m; sourceTree = "<group>"; };
 		74BAEE7920502233004D3D91 /* BaseNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationBar.h; sourceTree = "<group>"; };
@@ -202,6 +293,28 @@
 		74E10EA420527D2400847866 /* SceneItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneItem.m; sourceTree = "<group>"; };
 		74E19194205B7BED0053504C /* NSString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		74E19195205B7BED0053504C /* NSString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		74E191BA205BF0FC0053504C /* RestCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestCell.h; sourceTree = "<group>"; };
+		74E191BB205BF0FD0053504C /* RestCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestCell.m; sourceTree = "<group>"; };
+		74EE3C232063F9DC00B513E1 /* GuideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		74EE3C242063F9DC00B513E1 /* GuideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		74EE3C262063FCFD00B513E1 /* GuideScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuideScrollView.h; sourceTree = "<group>"; };
+		74EE3C272063FCFD00B513E1 /* GuideScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideScrollView.m; sourceTree = "<group>"; };
+		74EE3C292063FDC700B513E1 /* GuideScrollView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideScrollView.xib; sourceTree = "<group>"; };
+		74EE3C2B20649A8F00B513E1 /* guideInfor.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = guideInfor.plist; sourceTree = "<group>"; };
+		74EE3C2D20649AAA00B513E1 /* GuideItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuideItem.h; sourceTree = "<group>"; };
+		74EE3C2E20649AAA00B513E1 /* GuideItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideItem.m; sourceTree = "<group>"; };
+		74EE3C302064A32200B513E1 /* UILabel+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extension.h"; sourceTree = "<group>"; };
+		74EE3C312064A32200B513E1 /* UILabel+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extension.m"; sourceTree = "<group>"; };
+		74EE3C332064E8AE00B513E1 /* GuideTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuideTool.h; sourceTree = "<group>"; };
+		74EE3C342064E8AE00B513E1 /* GuideTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideTool.m; sourceTree = "<group>"; };
+		74EE3C382067EFCF00B513E1 /* LTAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTAlertView.h; sourceTree = "<group>"; };
+		74EE3C392067EFCF00B513E1 /* LTAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTAlertView.m; sourceTree = "<group>"; };
+		74EE3C3D20689C4800B513E1 /* LTAlertModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTAlertModel.h; sourceTree = "<group>"; };
+		74EE3C3E20689C4800B513E1 /* LTAlertModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTAlertModel.m; sourceTree = "<group>"; };
+		74EE3C4020689E4500B513E1 /* guideInfor_Focus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = guideInfor_Focus.plist; sourceTree = "<group>"; };
+		74FDB20B2060E6DF0063D11B /* SecurityEnvSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SecurityEnvSDK.framework; sourceTree = "<group>"; };
+		74FDB20D2060E6EA0063D11B /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
+		74FDB20F2060E70E0063D11B /* UMCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCommon.framework; sourceTree = "<group>"; };
 		BA3BC54EEF02E817CBD128F9 /* libPods-潮汐(LT).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-潮汐(LT).a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -210,13 +323,124 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74FDB20C2060E6E00063D11B /* SecurityEnvSDK.framework in Frameworks */,
+				74575CF12060AFC00026A147 /* SystemConfiguration.framework in Frameworks */,
+				74575D382060B9770026A147 /* libSocialQQ.a in Frameworks */,
+				74575CF52060AFE00026A147 /* Security.framework in Frameworks */,
+				74575CF32060AFD40026A147 /* libiconv.tbd in Frameworks */,
+				74575D372060B9770026A147 /* libSocialSina.a in Frameworks */,
+				74FDB2102060E70E0063D11B /* UMCommon.framework in Frameworks */,
+				74575D3A2060B9770026A147 /* libUMSocialLog.a in Frameworks */,
+				74575CEF2060AFA70026A147 /* CoreTelephony.framework in Frameworks */,
+				74575D362060B9770026A147 /* UMShare.framework in Frameworks */,
+				74575CED2060AF980026A147 /* libstdc++.tbd in Frameworks */,
+				74575CEB2060AF8A0026A147 /* libz.tbd in Frameworks */,
+				74575CE92060AF790026A147 /* libc++.tbd in Frameworks */,
+				74575CE72060AF670026A147 /* ImageIO.framework in Frameworks */,
+				74575D352060B9770026A147 /* UShareUI.framework in Frameworks */,
+				74575CE5206015570026A147 /* CoreGraphics.framework in Frameworks */,
+				74575CE3206015490026A147 /* libsqlite3.tbd in Frameworks */,
 				43E95033CF07CA3628BC2BFF /* libPods-潮汐(LT).a in Frameworks */,
+				74FDB20E2060E6EA0063D11B /* UTDID.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7456708C206139D300023E7F /* AV */ = {
+			isa = PBXGroup;
+			children = (
+				7456708D206139D300023E7F /* Glass_Note.caf */,
+				7456708E206139D300023E7F /* preset_focus_ocean.m4a */,
+				7456708F206139D300023E7F /* Space_Notification1.caf */,
+				74567090206139D300023E7F /* Tri-tone.caf */,
+				74567091206139D300023E7F /* preset_focus_muse.m4a */,
+				74567092206139D300023E7F /* Space_Error2.caf */,
+				74567093206139D300023E7F /* Space_Error1.caf */,
+				74567094206139D300023E7F /* preset_focus_rain.m4a */,
+				74567095206139D300023E7F /* preset_sleep_storm.m4a */,
+				74567096206139D300023E7F /* preset_sleep_evening.m4a */,
+				74567097206139D300023E7F /* intro.mp4 */,
+				74567098206139D300023E7F /* Glass_Done1.caf */,
+				74567099206139D300023E7F /* Glass_Done2.caf */,
+				7456709A206139D300023E7F /* Ticktack.m4a */,
+				7456709B206139D300023E7F /* Glass_Error1.caf */,
+				7456709C206139D300023E7F /* preset_wakeup_ocean.m4a */,
+				7456709D206139D300023E7F /* preset_wakeup_forest.m4a */,
+				7456709E206139D300023E7F /* Glass_Error2.caf */,
+			);
+			name = AV;
+			path = "潮汐(LT)/Classes/AV";
+			sourceTree = SOURCE_ROOT;
+		};
+		74575D242060B9770026A147 /* share */ = {
+			isa = PBXGroup;
+			children = (
+				74FDB20F2060E70E0063D11B /* UMCommon.framework */,
+				74FDB20D2060E6EA0063D11B /* UTDID.framework */,
+				74FDB20B2060E6DF0063D11B /* SecurityEnvSDK.framework */,
+				74575D252060B9770026A147 /* share_ios_6.8.2 */,
+			);
+			path = share;
+			sourceTree = "<group>";
+		};
+		74575D252060B9770026A147 /* share_ios_6.8.2 */ = {
+			isa = PBXGroup;
+			children = (
+				74575D262060B9770026A147 /* UMSocialUI */,
+				74575D292060B9770026A147 /* UMShare.framework */,
+				74575D2A2060B9770026A147 /* SocialLibraries */,
+				74575D312060B9770026A147 /* UMSocialSDKPlugin */,
+			);
+			path = share_ios_6.8.2;
+			sourceTree = "<group>";
+		};
+		74575D262060B9770026A147 /* UMSocialUI */ = {
+			isa = PBXGroup;
+			children = (
+				74575D272060B9770026A147 /* UMSocialSDKResources.bundle */,
+				74575D282060B9770026A147 /* UShareUI.framework */,
+			);
+			path = UMSocialUI;
+			sourceTree = "<group>";
+		};
+		74575D2A2060B9770026A147 /* SocialLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				74575D2B2060B9770026A147 /* Sina */,
+				74575D2E2060B9770026A147 /* QQ */,
+			);
+			path = SocialLibraries;
+			sourceTree = "<group>";
+		};
+		74575D2B2060B9770026A147 /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+				74575D2C2060B9770026A147 /* libSocialSina.a */,
+				74575D2D2060B9770026A147 /* UMSocialSinaHandler.h */,
+			);
+			path = Sina;
+			sourceTree = "<group>";
+		};
+		74575D2E2060B9770026A147 /* QQ */ = {
+			isa = PBXGroup;
+			children = (
+				74575D2F2060B9770026A147 /* UMSocialQQHandler.h */,
+				74575D302060B9770026A147 /* libSocialQQ.a */,
+			);
+			path = QQ;
+			sourceTree = "<group>";
+		};
+		74575D312060B9770026A147 /* UMSocialSDKPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				74575D322060B9770026A147 /* UMSocialSDKPromptResources.bundle */,
+				74575D332060B9770026A147 /* libUMSocialLog.a */,
+			);
+			path = UMSocialSDKPlugin;
+			sourceTree = "<group>";
+		};
 		74644E73204D3ED50068D9BE /* Foucus */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +496,10 @@
 				74E10E9E205273A900847866 /* SceneCell.h */,
 				74E10E9F205273A900847866 /* SceneCell.m */,
 				74E10EA0205273A900847866 /* SceneCell.xib */,
+				74B9747E2063B10E007F6E55 /* LTMusicPlayer.h */,
+				74B9747F2063B10E007F6E55 /* LTMusicPlayer.m */,
+				74EE3C382067EFCF00B513E1 /* LTAlertView.h */,
+				74EE3C392067EFCF00B513E1 /* LTAlertView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -306,6 +534,8 @@
 				743F6C2E205AA8B0001511D9 /* SleepRespiteCenterView.xib */,
 				743F6C30205AB2D3001511D9 /* LTVerticalButton.h */,
 				743F6C31205AB2D3001511D9 /* LTVerticalButton.m */,
+				74E191BA205BF0FC0053504C /* RestCell.h */,
+				74E191BB205BF0FD0053504C /* RestCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -331,11 +561,16 @@
 		74778FCF20492F2F00C180FA /* 潮汐(LT) */ = {
 			isa = PBXGroup;
 			children = (
+				7440D5182070FCFE001410EE /* 潮汐(LT).entitlements */,
+				7440D496206D2CC7001410EE /* NotoSerif-Italic.ttf */,
 				74778FF92049569A00C180FA /* Classes */,
 				74778FD020492F2F00C180FA /* AppDelegate.h */,
 				74778FD120492F2F00C180FA /* AppDelegate.m */,
 				74778FD920492F2F00C180FA /* Assets.xcassets */,
 				74778FDB20492F2F00C180FA /* LaunchScreen.storyboard */,
+				74EE3C4020689E4500B513E1 /* guideInfor_Focus.plist */,
+				74EE3C2B20649A8F00B513E1 /* guideInfor.plist */,
+				74B974752063A84A007F6E55 /* focusMusic.plist */,
 				74644E8E204D8E2F0068D9BE /* focusTimePlist.plist */,
 				749EF97A205A4C4300D3FE3E /* time.plist */,
 				74778FDE20492F2F00C180FA /* Info.plist */,
@@ -347,12 +582,15 @@
 		74778FF92049569A00C180FA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				74575D242060B9770026A147 /* share */,
+				74B974862063DC48007F6E55 /* Guide */,
 				74778FFA2049569A00C180FA /* Middle */,
 				7477906220499CDC00C180FA /* Down */,
 				7477900A2049569A00C180FA /* Up */,
 				74644E73204D3ED50068D9BE /* Foucus */,
 				74BF73C5204F86FE0094BC2E /* Equalizer */,
 				74644E76204D3EF20068D9BE /* Sleep */,
+				7456708C206139D300023E7F /* AV */,
 				74BF73DA204F960E0094BC2E /* Other */,
 			);
 			path = Classes;
@@ -478,7 +716,46 @@
 				7477906C204AA9FF00C180FA /* LTButton.m */,
 				74644E6B204CFCB90068D9BE /* CenterView.h */,
 				74644E6C204CFCBA0068D9BE /* CenterView.m */,
-				74644E6E204D08A40068D9BE /* CenterView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74B974862063DC48007F6E55 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				74B974872063DC92007F6E55 /* Controller */,
+				74B974882063DC92007F6E55 /* Model */,
+				74B974892063DC92007F6E55 /* View */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		74B974872063DC92007F6E55 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				74EE3C232063F9DC00B513E1 /* GuideViewController.h */,
+				74EE3C242063F9DC00B513E1 /* GuideViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		74B974882063DC92007F6E55 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74EE3C2D20649AAA00B513E1 /* GuideItem.h */,
+				74EE3C2E20649AAA00B513E1 /* GuideItem.m */,
+				74EE3C332064E8AE00B513E1 /* GuideTool.h */,
+				74EE3C342064E8AE00B513E1 /* GuideTool.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74B974892063DC92007F6E55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74EE3C262063FCFD00B513E1 /* GuideScrollView.h */,
+				74EE3C272063FCFD00B513E1 /* GuideScrollView.m */,
+				74EE3C292063FDC700B513E1 /* GuideScrollView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -500,6 +777,8 @@
 				74BAEE8A20504520004D3D91 /* FocusSwitchItem.m */,
 				74E10EA320527D2400847866 /* SceneItem.h */,
 				74E10EA420527D2400847866 /* SceneItem.m */,
+				74EE3C3D20689C4800B513E1 /* LTAlertModel.h */,
+				74EE3C3E20689C4800B513E1 /* LTAlertModel.m */,
 			);
 			name = Model;
 			path = "潮汐(LT)/Classes/Foucus/Model";
@@ -541,6 +820,8 @@
 			isa = PBXGroup;
 			children = (
 				74BF73DB204F96840094BC2E /* PrefixHearder.h */,
+				74EE3C302064A32200B513E1 /* UILabel+Extension.h */,
+				74EE3C312064A32200B513E1 /* UILabel+Extension.m */,
 				74E19194205B7BED0053504C /* NSString+Extension.h */,
 				74E19195205B7BED0053504C /* NSString+Extension.m */,
 				74760BA620574F68003945D7 /* UIButton+Extension.h */,
@@ -566,6 +847,16 @@
 		D3578D066710C31985FADC31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74575CF42060AFDF0026A147 /* Security.framework */,
+				74575CF22060AFD40026A147 /* libiconv.tbd */,
+				74575CF02060AFC00026A147 /* SystemConfiguration.framework */,
+				74575CEE2060AFA60026A147 /* CoreTelephony.framework */,
+				74575CEC2060AF980026A147 /* libstdc++.tbd */,
+				74575CEA2060AF8A0026A147 /* libz.tbd */,
+				74575CE82060AF790026A147 /* libc++.tbd */,
+				74575CE62060AF670026A147 /* ImageIO.framework */,
+				74575CE4206015570026A147 /* CoreGraphics.framework */,
+				74575CE2206015490026A147 /* libsqlite3.tbd */,
 				BA3BC54EEF02E817CBD128F9 /* libPods-潮汐(LT).a */,
 			);
 			name = Frameworks;
@@ -606,6 +897,14 @@
 					74778FCC20492F2F00C180FA = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -632,29 +931,52 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				745670A6206139D300023E7F /* preset_focus_rain.m4a in Resources */,
 				74BF73D6204F92980094BC2E /* EqualierViewController.xib in Resources */,
 				743F6C2F205AA8B0001511D9 /* SleepRespiteCenterView.xib in Resources */,
 				7477906A20499D7500C180FA /* DownViewController.xib in Resources */,
 				749EF969205A1C8E00D3FE3E /* LTSleepViewController.xib in Resources */,
 				74644E8F204D8E2F0068D9BE /* focusTimePlist.plist in Resources */,
+				74575D342060B9770026A147 /* UMSocialSDKResources.bundle in Resources */,
 				74E10E9D20526E9900847866 /* SceneHeadView.xib in Resources */,
+				74EE3C2C20649A8F00B513E1 /* guideInfor.plist in Resources */,
 				74779037204975DE00C180FA /* LTCollectionViewCell.xib in Resources */,
+				745670B0206139D300023E7F /* Glass_Error2.caf in Resources */,
 				7477902120495ADA00C180FA /* DateView.xib in Resources */,
 				747790132049569A00C180FA /* WordsView.xib in Resources */,
+				745670A1206139D300023E7F /* Space_Notification1.caf in Resources */,
+				745670A4206139D300023E7F /* Space_Error2.caf in Resources */,
 				74778FDD20492F2F00C180FA /* LaunchScreen.storyboard in Resources */,
+				745670A7206139D300023E7F /* preset_sleep_storm.m4a in Resources */,
 				74778FDA20492F2F00C180FA /* Assets.xcassets in Resources */,
+				745670A8206139D300023E7F /* preset_sleep_evening.m4a in Resources */,
+				74B974762063A84A007F6E55 /* focusMusic.plist in Resources */,
 				74007636204FC5ED00B99119 /* EqualierViewCell.xib in Resources */,
 				74779019204956CF00C180FA /* UpViewController.xib in Resources */,
+				745670AA206139D300023E7F /* Glass_Done1.caf in Resources */,
+				7456709F206139D300023E7F /* Glass_Note.caf in Resources */,
 				747790112049569A00C180FA /* ImagePickerView.xib in Resources */,
+				745670AB206139D300023E7F /* Glass_Done2.caf in Resources */,
+				74575D392060B9770026A147 /* UMSocialSDKPromptResources.bundle in Resources */,
+				745670A0206139D300023E7F /* preset_focus_ocean.m4a in Resources */,
 				749EF96E205A296600D3FE3E /* SleepCenterView.xib in Resources */,
+				74EE3C4120689E4500B513E1 /* guideInfor_Focus.plist in Resources */,
+				74EE3C2A2063FDC700B513E1 /* GuideScrollView.xib in Resources */,
+				745670AF206139D300023E7F /* preset_wakeup_forest.m4a in Resources */,
+				745670AC206139D300023E7F /* Ticktack.m4a in Resources */,
+				745670AD206139D300023E7F /* Glass_Error1.caf in Resources */,
 				74007634204FBA5100B99119 /* CountTimeCell.xib in Resources */,
 				74E10EA2205273A900847866 /* SceneCell.xib in Resources */,
 				74644E82204D41C60068D9BE /* FocusViewController.xib in Resources */,
+				745670A9206139D300023E7F /* intro.mp4 in Resources */,
 				74778FD820492F2F00C180FA /* Main.storyboard in Resources */,
+				745670A5206139D300023E7F /* Space_Error1.caf in Resources */,
 				74644E8D204D67FD0068D9BE /* FocusRoundView.xib in Resources */,
+				745670AE206139D300023E7F /* preset_wakeup_ocean.m4a in Resources */,
 				74BF73EB204FA3060094BC2E /* LTBaseNavigationController.xib in Resources */,
-				74644E6F204D08A40068D9BE /* CenterView.xib in Resources */,
+				745670A2206139D300023E7F /* Tri-tone.caf in Resources */,
 				749EF97B205A4C4300D3FE3E /* time.plist in Resources */,
+				745670A3206139D300023E7F /* preset_focus_muse.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,21 +1044,28 @@
 				7426AD362058F7E7003E01B4 /* UIView+LTExtension.m in Sources */,
 				74BAEE7720501259004D3D91 /* FocusSettingViewController.m in Sources */,
 				747790142049569A00C180FA /* ImagePickerView.m in Sources */,
+				74B974802063B10E007F6E55 /* LTMusicPlayer.m in Sources */,
 				74007632204FBA0B00B99119 /* CountTimeCell.m in Sources */,
 				74E19196205B7BED0053504C /* NSString+Extension.m in Sources */,
 				74BAEE8520504336004D3D91 /* FocusSettingCell.m in Sources */,
 				74779018204956CF00C180FA /* UpViewController.m in Sources */,
+				74EE3C2F20649AAA00B513E1 /* GuideItem.m in Sources */,
 				74BAEE8820504504004D3D91 /* FocusArrowItem.m in Sources */,
 				7477900E2049569A00C180FA /* ViewController.m in Sources */,
+				74EE3C3A2067EFCF00B513E1 /* LTAlertView.m in Sources */,
 				74BAEE8B20504520004D3D91 /* FocusSwitchItem.m in Sources */,
 				7477901F20495ACE00C180FA /* DateView.m in Sources */,
 				743F6C32205AB2D3001511D9 /* LTVerticalButton.m in Sources */,
+				74EE3C3F20689C4800B513E1 /* LTAlertModel.m in Sources */,
 				7477906D204AA9FF00C180FA /* LTButton.m in Sources */,
+				74EE3C252063F9DC00B513E1 /* GuideViewController.m in Sources */,
 				747790122049569A00C180FA /* WordsView.m in Sources */,
 				749EF97E205A5FEB00D3FE3E /* UIPickerView+Extension.m in Sources */,
 				74E10EA1205273A900847866 /* SceneCell.m in Sources */,
 				74BAEE91205115DF004D3D91 /* LTCountTimeViewController.m in Sources */,
 				74BF73C4204EE10B0094BC2E /* FocusCenterView.m in Sources */,
+				74EE3C352064E8AE00B513E1 /* GuideTool.m in Sources */,
+				74EE3C322064A32200B513E1 /* UILabel+Extension.m in Sources */,
 				74BAEE8220504312004D3D91 /* FocusSettingGroup.m in Sources */,
 				74E10EA520527D2400847866 /* SceneItem.m in Sources */,
 				74BAEEA02051560A004D3D91 /* LTBaseSettingViewController.m in Sources */,
@@ -751,6 +1080,7 @@
 				74BAEEA9205266CF004D3D91 /* SceneViewController.m in Sources */,
 				74BAEEA320515BD1004D3D91 /* OtherItem.m in Sources */,
 				749EF87920596B8700D3FE3E /* CircleAnimationView.m in Sources */,
+				74E191BC205BF0FD0053504C /* RestCell.m in Sources */,
 				74BAEE9A20511856004D3D91 /* LTHighEffectViewController.m in Sources */,
 				74BAEE7F205042FA004D3D91 /* FocusSettingItem.m in Sources */,
 				74644E72204D3D540068D9BE /* LTUpButton.m in Sources */,
@@ -762,6 +1092,7 @@
 				749EF96C205A295600D3FE3E /* SleepCenterView.m in Sources */,
 				74644E6D204CFCBA0068D9BE /* CenterView.m in Sources */,
 				74760BA820574F68003945D7 /* UIButton+Extension.m in Sources */,
+				74EE3C282063FCFD00B513E1 /* GuideScrollView.m in Sources */,
 				74778FD220492F2F00C180FA /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -896,15 +1227,44 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2367D4A52412C5B5D69EA0DE /* Pods-潮汐(LT).debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "潮汐(LT)/潮汐(LT).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4LX6G4532A;
+				DEVELOPMENT_TEAM = 7QDCYKLJ85;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/潮汐(LT)/share/share_ios_6.8.2/UMSocialUI",
+					"$(PROJECT_DIR)/潮汐(LT)/share/share_ios_6.8.2",
+					"$(PROJECT_DIR)/潮汐(LT)/share_ios_6.8.2/UMSocialUI",
+					"$(PROJECT_DIR)/潮汐(LT)/share_ios_6.8.2",
+					"$(PROJECT_DIR)/潮汐(LT)/Classes/share/share_ios_6.8.2/UMSocialUI",
+					"$(PROJECT_DIR)/潮汐(LT)/Classes/share/share_ios_6.8.2",
+					"$(PROJECT_DIR)/潮汐(LT)/Classes/share",
+				);
 				GCC_PREFIX_HEADER = "潮汐(LT)/Classes/Other/PrefixHearder.h";
 				INFOPLIST_FILE = "潮汐(LT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.helen.FocusAndRest;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/潮汐(LT)/share/share_ios_6.8.2/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/潮汐(LT)/share/share_ios_6.8.2/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/潮汐(LT)/share/share_ios_6.8.2/UMSocialSDKPlugin",
+					"$(PROJECT_DIR)/潮汐(LT)/share_ios_6.8.2/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/潮汐(LT)/share_ios_6.8.2/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/潮汐(LT)/share_ios_6.8.2/UMSocialSDKPlugin",
+					"$(PROJECT_DIR)/潮汐(LT)/Classes/share/share_ios_6.8.2/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/潮汐(LT)/Classes/share/share_ios_6.8.2/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/潮汐(LT)/Classes/share/share_ios_6.8.2/UMSocialSDKPlugin",
+					"$(PROJECT_DIR)/潮汐(LT)/FocusAndRest/Pods",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Helen.FocusAndRest.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/潮汐(LT)/FocusAndRest/Pods";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -912,15 +1272,44 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7265070AB456A17BC03CAB8B /* Pods-潮汐(LT).release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "潮汐(LT)/潮汐(LT).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4LX6G4532A;
+				DEVELOPMENT_TEAM = 7QDCYKLJ85;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/潮汐(LT)/share/share_ios_6.8.2/UMSocialUI",
+					"$(PROJECT_DIR)/潮汐(LT)/share/share_ios_6.8.2",
+					"$(PROJECT_DIR)/潮汐(LT)/share_ios_6.8.2/UMSocialUI",
+					"$(PROJECT_DIR)/潮汐(LT)/share_ios_6.8.2",
+					"$(PROJECT_DIR)/潮汐(LT)/Classes/share/share_ios_6.8.2/UMSocialUI",
+					"$(PROJECT_DIR)/潮汐(LT)/Classes/share/share_ios_6.8.2",
+					"$(PROJECT_DIR)/潮汐(LT)/Classes/share",
+				);
 				GCC_PREFIX_HEADER = "潮汐(LT)/Classes/Other/PrefixHearder.h";
 				INFOPLIST_FILE = "潮汐(LT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.helen.FocusAndRest;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/潮汐(LT)/share/share_ios_6.8.2/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/潮汐(LT)/share/share_ios_6.8.2/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/潮汐(LT)/share/share_ios_6.8.2/UMSocialSDKPlugin",
+					"$(PROJECT_DIR)/潮汐(LT)/share_ios_6.8.2/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/潮汐(LT)/share_ios_6.8.2/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/潮汐(LT)/share_ios_6.8.2/UMSocialSDKPlugin",
+					"$(PROJECT_DIR)/潮汐(LT)/Classes/share/share_ios_6.8.2/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/潮汐(LT)/Classes/share/share_ios_6.8.2/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/潮汐(LT)/Classes/share/share_ios_6.8.2/UMSocialSDKPlugin",
+					"$(PROJECT_DIR)/潮汐(LT)/FocusAndRest/Pods",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Helen.FocusAndRest.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/潮汐(LT)/FocusAndRest/Pods";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};

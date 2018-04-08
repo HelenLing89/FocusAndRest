@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>icon</key>
+		<string>guide_intro_logo_1</string>
+		<key>largeWords</key>
+		<string>在大自然中专注创造</string>
+		<key>smallWords</key>
+		<string>置身海边森林或者雨天,来一场灵感风暴</string>
+		<key>buttonWords</key>
+		<string>继续</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>guide_intro_logo_2</string>
+		<key>largeWords</key>
+		<string>和万物声音一起入眠</string>
+		<key>smallWords</key>
+		<string>看蝉鸣晚风,听月明星河</string>
+		<key>buttonWords</key>
+		<string>继续</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>guide_intro_logo_3</string>
+		<key>largeWords</key>
+		<string>遇见更平和的自己</string>
+		<key>smallWords</key>
+		<string>从今天起,和潮汐一起平静身心</string>
+		<key>buttonWords</key>
+		<string>开始潮汐</string>
+	</dict>
+</array>
+</plist>
